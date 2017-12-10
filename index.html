@@ -14,6 +14,7 @@ body {
     flex-direction: column;
     align-items: center;
     margin-top: 40px;
+    font-family: sans-serif;
 }
 h1 { display: none; }
 img {
@@ -31,6 +32,19 @@ button {
 button:nth-child(1) { background-color: #18d748; }
 button:nth-child(2) { background-color: #e03813; }
 
+.banner {
+    position: absolute;
+    top: 40px;
+    left: -80px;
+    padding: 10px;
+    color: white;
+    background: #175f7e;
+    width: 300px;
+    text-align: center;
+    text-decoration: none;
+    transform: rotate(-45deg);
+}
+
     </style>
 </head>
 <body>
@@ -41,6 +55,8 @@ button:nth-child(2) { background-color: #e03813; }
     <main>
         <!-- Buttons placed here -->
     </main>
+
+    <a href="https://github.com/ErikBoesen/cpsoundboard" class="banner" target="_blank">Fork on GitHub</a>
     <script>
 var sounds = ['gain', 'alarm'];
 var main = document.getElementsByTagName('main')[0];
