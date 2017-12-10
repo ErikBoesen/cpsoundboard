@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+    <title>CyberPatriot Soundboard</title>
+    <style>
+
+html, body { height: 100%; }
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+h1 { display: none; }
+img {
+    width: 400px;
+}
+button {
+    width: 120px;
+    height: 60px;
+    margin: 10px;
+    border: none;
+    color: white;
+    font-size: 20px;
+}
+button:nth-child(1) { background-color: #18d748; }
+button:nth-child(2) { background-color: #e03813; }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CyberPatriot Soundboard</h1>
+        <img src="logo.png" alt="CyberPatriot logo">
+    </header>
+    <main>
+        <!-- Buttons placed here -->
+    </main>
+    <script>
+var sounds = ['gain', 'alarm'];
+var main = document.getElementsByTagName('main')[0];
+for (i in sounds) {
+    var btn = document.createElement('button');
+    btn.innerHTML = sounds[i].toUpperCase();
+    btn.id = sounds[i];
+
+    main.appendChild(btn);
+}
+
+onclick = function(e) {
+    if (e.target.tagName === 'BUTTON') (new Audio('sounds/' + e.target.id + '.wav')).play();
+}
+    </script>
+</body>
+</html>
