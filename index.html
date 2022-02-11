@@ -67,7 +67,7 @@ var sounds = ['gain', 'alarm', 'gong', 'horn', 'siren'];
 var main = document.getElementsByTagName('main')[0];
 for (i in sounds) {
     var btn = document.createElement('button');
-    btn.innerHTML = sounds[i].toUpperCase();
+    btn.textContent = sounds[i].toUpperCase().replace('_', ' ');
     btn.id = sounds[i];
 
     main.appendChild(btn);
